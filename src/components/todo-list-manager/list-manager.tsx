@@ -3,6 +3,7 @@ import './list-manager.scss';
 import { TodoItem } from '../../models/todo-item';
 import { ListService } from '../../services/list-service';
 import NewItem from '../new-item-input/new-item';
+import { ListItem } from '../list-item/list-item';
 
 interface Props {}
 
@@ -31,9 +32,9 @@ class ListManager extends React.Component<Props, State> {
           <p>Todo list</p>
         </header>
         <NewItem/>
-        <ul>
-          {this.state.list.map((element) => <li key={element._id}>{element.title}</li>)}
-        </ul>
+        <div>
+          {this.state.list.map((element) => <ListItem key={element._id} element={element}/>)}
+        </div>
       </div>
     );
   }

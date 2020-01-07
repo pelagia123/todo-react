@@ -1,0 +1,15 @@
+.todo-item {
+  display: flex;
+  flex-direction: row;
+  width: 30vw;
+  justify-content: space-between;
+  align-items: center;
+  height: 2rem;
+}
+
+button {
+  background: transparent;
+  border: 1px solid darkred;
+  border-radius: 8px;
+  color: darkred;
+}
